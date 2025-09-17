@@ -1,0 +1,3159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Rıdvan Yiğit - AI Engineer & Autonomous Agent Developer | Vienna</title>
+    <meta name="title" content="Rıdvan Yiğit - AI Engineer & Autonomous Agent Developer | Vienna">
+    <meta name="description" content="Expert AI Engineer specializing in autonomous agent systems, CrewAI, LangChain development. Based in Vienna. Available for AI consulting & custom agent development.">
+    <meta name="keywords" content="AI Engineer Vienna, CrewAI Developer, LangChain Expert, Autonomous Agents, AI Consulting, Machine Learning Vienna, OpenAI API Integration, AI Agent Development">
+    <meta name="author" content="Rıdvan Yiğit">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ridvanyigit.com">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ridvanyigit.com">
+    <meta property="og:title" content="Rıdvan Yiğit - AI Engineer & Autonomous Agent Developer">
+    <meta property="og:description" content="Expert AI Engineer specializing in autonomous agent systems, CrewAI, LangChain development. Based in Vienna.">
+    <meta property="og:image" content="https://ridvanyigit.com/og-image.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Rıdvan Yiğit - AI Engineer">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ridvanyigit.com">
+    <meta property="twitter:title" content="Rıdvan Yiğit - AI Engineer & Autonomous Agent Developer">
+    <meta property="twitter:description" content="Expert AI Engineer specializing in autonomous agent systems, CrewAI, LangChain development. Based in Vienna.">
+    <meta property="twitter:image" content="https://ridvanyigit.com/twitter-image.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rıdvan Yiğit",
+        "jobTitle": "AI Engineer & Autonomous Agent Developer",
+        "description": "Expert AI Engineer specializing in autonomous agent systems, CrewAI, LangChain development",
+        "url": "https://ridvanyigit.com",
+        "image": "https://ridvanyigit.com/profile-image.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Vienna",
+            "addressCountry": "AT"
+        },
+        "alumniOf": "Hakkari, Turkey",
+        "knowsAbout": ["Artificial Intelligence", "Machine Learning", "CrewAI", "LangChain", "OpenAI API", "Autonomous Agents", "Python", "FastAPI", "Web Development"],
+        "sameAs": [
+            "https://www.linkedin.com/in/ridvan-yigit-5494842b6/",
+            "https://github.com/ridvanyigit",
+            "https://huggingface.co/ridvanyigit"
+        ],
+        "offers": {
+            "@type": "Service",
+            "serviceType": "AI Engineering Services",
+            "description": "Custom AI agent development, web development with AI integration, and AI strategy consulting",
+            "areaServed": "Vienna, Austria"
+        }
+    }
+    </script>
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Preconnects for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://gradio.s3-us-west-2.amazonaws.com">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
+    <style>
+        :root {
+            --primary: #0070f3;
+            --primary-dark: #0051cc;
+            --primary-light: #3291ff;
+            --secondary: #7c3aed;
+            --secondary-dark: #5b21b6;
+            --accent: #f59e0b;
+            --accent-bright: #fbbf24;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-tertiary: #f1f5f9;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --text-muted: #94a3b8;
+            --border: #e2e8f0;
+            --border-light: #f1f5f9;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --shadow-lg: rgba(0, 0, 0, 0.15);
+            --shadow-xl: rgba(0, 0, 0, 0.25);
+            --gradient-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-card: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            --gradient-text: linear-gradient(135deg, var(--primary), var(--secondary));
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        [data-theme="dark"] {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --primary-light: #60a5fa;
+            --secondary: #8b5cf6;
+            --secondary-dark: #7c3aed;
+            --accent: #f59e0b;
+            --accent-bright: #fbbf24;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --border-light: #475569;
+            --shadow: rgba(0, 0, 0, 0.3);
+            --shadow-lg: rgba(0, 0, 0, 0.4);
+            --shadow-xl: rgba(0, 0, 0, 0.6);
+            --gradient-bg: linear-gradient(135deg, #1e3a8a 0%, #581c87 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: var(--transition);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Loading Screen */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: var(--bg-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 4px solid var(--border);
+            border-top: 4px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Custom cursor */
+        .cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.15s ease;
+            display: none;
+            mix-blend-mode: difference;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .cursor {
+                display: block;
+            }
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: var(--transition);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        [data-theme="dark"] .navbar {
+            background: rgba(15, 23, 42, 0.95);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: var(--gradient-text);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: var(--transition);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 50%;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 2px solid var(--border);
+            padding: 0.6rem;
+            border-radius: 12px;
+            cursor: pointer;
+            color: var(--text-primary);
+            transition: var(--transition);
+            font-size: 1.2rem;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient-bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.1;
+            background-image: 
+                radial-gradient(circle at 25% 25%, var(--primary) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, var(--secondary) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-title {
+            font-size: clamp(3.5rem, 8vw, 7rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease 0.8s both;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 1s both;
+        }
+
+        .btn {
+            padding: 1.2rem 2.5rem;
+            border-radius: 60px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+        }
+
+        /* Floating elements */
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: -2s;
+        }
+
+        .floating-element:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            right: 10%;
+            animation-delay: -4s;
+        }
+
+        .floating-element:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            bottom: 30%;
+            left: 20%;
+            animation-delay: -1s;
+        }
+
+        /* Sections */
+        .section {
+            padding: 8rem 0;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--bg-secondary);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .about-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .about-highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .about-journey {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: var(--bg-primary);
+            border-radius: 20px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: var(--bg-primary);
+            padding: 2.5rem;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-text);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px var(--shadow-lg);
+        }
+
+        .skill-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-text);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .skill-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+        }
+
+        .skill-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .skill-level {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .level-bar {
+            flex: 1;
+            height: 4px;
+            background: var(--border);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .level-fill {
+            height: 100%;
+            background: var(--primary);
+            transition: width 2s ease;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: var(--bg-primary);
+            padding: 3.5rem;
+            border-radius: 30px;
+            box-shadow: 0 15px 50px var(--shadow);
+            transition: var(--transition-slow);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-card);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 30px 80px var(--shadow-xl);
+        }
+
+        .service-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-text);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .service-badge {
+            background: var(--accent);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: auto;
+        }
+
+        .service-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .service-price {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Projects Section */
+        .projects {
+            background: var(--bg-secondary);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .project-card {
+            background: var(--bg-primary);
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px var(--shadow);
+            transition: var(--transition-slow);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 450px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 80px var(--shadow-xl);
+        }
+
+        .project-header {
+            height: 220px;
+            background: var(--gradient-bg);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .project-icon {
+            font-size: 4rem;
+            color: white;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-status {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--success);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .project-content {
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .project-metrics {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid var(--border);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: auto;
+        }
+
+        .project-link {
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .link-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .link-secondary {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .project-link:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Blog Preview Section */
+        .blog {
+            background: var(--bg-secondary);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: var(--bg-primary);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px var(--shadow-lg);
+        }
+
+        .blog-image {
+            height: 200px;
+            background: var(--gradient-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .blog-content {
+            padding: 2rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .blog-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .blog-excerpt {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .blog-link:hover {
+            color: var(--primary-dark);
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: stretch;
+        }
+
+        .contact-info {
+            background: var(--bg-primary);
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: 0 15px 50px var(--shadow);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            border: 1px solid var(--border);
+        }
+
+        .contact-intro {
+            margin-bottom: 2rem;
+        }
+
+        .contact-intro h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .contact-intro p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .contact-items-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            border-radius: 16px;
+            transition: var(--transition);
+            border: 1px solid var(--border);
+        }
+
+        .contact-item:hover {
+            background: var(--bg-secondary);
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px var(--shadow);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-text);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-text strong {
+            display: block;
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .contact-text a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-text a:hover {
+            color: var(--primary);
+        }
+
+        .contact-availability {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+
+        .availability-status {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: var(--bg-primary);
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: 0 15px 50px var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .contact-form h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .form-submit:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .form-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Chatbot Message Styles */
+        .chatbot-header {
+            padding: 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+
+        .chatbot-header h3 {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .message {
+            max-width: 85%;
+            padding: 0.8rem 1.2rem;
+            border-radius: 18px;
+            word-wrap: break-word;
+            animation: messageSlide 0.3s ease;
+        }
+
+        .message.user {
+            background: var(--primary);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+
+        .message.assistant {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+            border: 1px solid var(--border);
+        }
+
+        .message.loading {
+            background: var(--bg-secondary);
+            color: var(--text-muted);
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+            border: 1px solid var(--border);
+        }
+
+        .typing-indicator {
+            display: flex;
+            gap: 0.3rem;
+            align-items: center;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--text-muted);
+            border-radius: 50%;
+            animation: typingDots 1.4s infinite ease-in-out;
+        }
+
+        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+        .chatbot-input-area {
+            padding: 1rem;
+            border-top: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+
+        .chatbot-input-container {
+            display: flex;
+            gap: 0.5rem;
+            align-items: flex-end;
+        }
+
+        .chatbot-input {
+            flex: 1;
+            resize: none;
+            border: 2px solid var(--border);
+            border-radius: 20px;
+            padding: 0.8rem 1rem;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            max-height: 100px;
+            min-height: 40px;
+            transition: var(--transition);
+        }
+
+        .chatbot-input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .chatbot-send-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .chatbot-send-btn:hover:not(:disabled) {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+        }
+
+        .chatbot-send-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        @keyframes messageSlide {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes typingDots {
+            0%, 80%, 100% { 
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            40% { 
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Floating Chatbot Section */
+        #floatingChatbotWrapper {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 10000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 1rem;
+        }
+
+        #chatbotToggleButton {
+            background: var(--primary);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            transition: transform 0.2s ease, background 0.2s ease;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        #chatbotToggleButton:hover {
+            transform: translateY(-5px);
+            background: var(--primary-dark);
+        }
+
+        #chatbotToggleButton .chatbot-icon {
+            display: block;
+        }
+
+        #chatbotToggleButton .chatbot-close-icon {
+            display: none;
+            font-size: 1.5rem;
+        }
+
+        #chatbotToggleButton[aria-expanded="true"] .chatbot-icon {
+            display: none;
+        }
+        #chatbotToggleButton[aria-expanded="true"] .chatbot-close-icon {
+            display: block;
+        }
+
+        #chatbotPanel {
+            background: var(--bg-primary);
+            border-radius: 24px;
+            box-shadow: 0 10px 30px var(--shadow-lg);
+            border: 1px solid var(--border);
+            width: 380px;
+            max-width: 90vw;
+            height: 600px;
+            max-height: 80vh;
+            padding: 1.5rem;
+            position: absolute;
+            bottom: calc(100% + 1rem);
+            right: 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px) scale(0.95);
+            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            pointer-events: none;
+        }
+
+        #chatbotPanel.chatbot-open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+            pointer-events: all;
+        }
+
+        #chatbotPanel h3 {
+            margin-bottom: 1rem;
+            text-align: center;
+            color: var(--text-primary);
+            font-size: 1.4rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        /* Başlangıçtaki gradio-app stilini güncellenmiş kodunuzla değiştiriyoruz */
+        #chatbotPanel gradio-app {
+            width: 100%;
+            flex: 1;
+            min-height: 300px;
+            
+            /* Web sitesinin kart stiline uyması için kenarlık, kenar yarıçapı ve gölge ekleyin/değiştirin */
+            border: 1px solid var(--border); /* Web sitesinin kenarlık stilini uygulayın */
+            border-radius: 24px; /* Kartlar için web sitesinin kenar yarıçapını uygulayın */
+            box-shadow: 0 10px 30px var(--shadow-lg); /* Web sitesinin gölge stilini uygulayın */
+            background: var(--bg-primary); /* Kapsayıcı öğe arka planının eşleştiğinden emin olun */
+
+            /* Gradio'nun iç CSS değişkenlerini geçersiz kılma girişimi.
+               Bu değişkenler, Gradio'nun Shadow DOM'u tarafından iç bileşenleri için kullanılır. */
+            --background-fill: var(--bg-primary); /* Gradio uygulamasının ana arka planı */
+            --block-background-fill: var(--bg-secondary); /* Sohbet mesajları, giriş alanları vb. için arka plan */
+            --input-background-fill: var(--bg-secondary); /* Giriş alanları için özel */
+            --input-border-color-focus: var(--primary); /* Odaklanmış giriş için kenarlık */
+            --input-border-color: var(--border); /* Varsayılan giriş kenarlığı */
+            --border-color-primary: var(--border); /* Gradio öğeleri için genel kenarlık rengi */
+            --primary-color: var(--primary); /* Düğmeler, aktif durumlar için vurgu rengi */
+            --secondary-color: var(--secondary); /* İkincil vurgu rengi */
+            --text-color: var(--text-primary); /* Gradio içindeki ana metin rengi */
+            --text-color-subdued: var(--text-secondary); /* Soluk metin rengi */
+            --shadow-color: var(--shadow); /* İç Gradio bileşenleri için gölge */
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Ana site yazı tipini eşleştirin */
+            --font-mono: 'Inter', monospace; /* Gradio içinde mono yazı tipi kullanılıyorsa */
+            --button-primary-background-fill: var(--primary); /* Birincil düğme arka planı */
+            --button-primary-text-color: white; /* Birincil düğme metin rengi */
+            --button-secondary-background-fill: var(--bg-secondary); /* İkincil düğme arka planı */
+            --button-secondary-text-color: var(--text-primary); /* İkincil düğme metin rengi */
+            --button-secondary-border-color: var(--border); /* İkincil düğme kenarlık rengi */
+            --border-radius-xl: 24px; /* Daha büyük öğeler için genel kenar yarıçapı */
+            --border-radius-lg: 16px; /* Mesaj balonları gibi daha küçük öğeler için */
+            --border-radius-md: 12px;
+            --border-radius-sm: 8px;
+        }
+
+        /* Koyu tema için Gradio uygulamasının iç metin rengini ayarlayın (değişkenler çalışsa da sağlamlık için iyidir) */
+        [data-theme="dark"] #chatbotPanel gradio-app {
+            --background-fill: var(--bg-primary);
+            --block-background-fill: var(--bg-secondary);
+            --input-background-fill: var(--bg-secondary);
+            --input-border-color-focus: var(--primary);
+            --input-border-color: var(--border);
+            --border-color-primary: var(--border);
+            --primary-color: var(--primary);
+            --secondary-color: var(--secondary);
+            --text-color: var(--text-primary);
+            --text-color-subdued: var(--text-secondary);
+            --shadow-color: var(--shadow);
+        }
+
+
+        /* Footer */
+        .footer {
+            background: var(--bg-tertiary);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: var(--gradient-text);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-brand p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--bg-primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1px solid var(--border);
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .footer-section h4 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { 
+                transform: translateY(0px); 
+            }
+            50% { 
+                transform: translateY(-20px); 
+            }
+        }
+
+        @keyframes particleFloat {
+            to {
+                transform: translateY(-100vh) translateX(0px);
+                opacity: 0;
+            }
+        }
+
+        /* Scroll animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Progress indicator */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--primary);
+            z-index: 9999;
+            transition: width 0.3s ease;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            z-index: 1000;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        .back-to-top.visible {
+            display: flex;
+        }
+
+        /* Error states */
+        .error-message {
+            background: var(--error);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            display: none;
+        }
+
+        .success-message {
+            background: var(--success);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            display: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            .section {
+                padding: 6rem 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--bg-primary);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 10px 30px var(--shadow);
+                border-radius: 0 0 20px 20px;
+                border-top: 1px solid var(--border);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-link {
+                padding: 1rem 0;
+                border-bottom: 1px solid var(--border);
+                text-align: center;
+                width: 100%;
+            }
+            
+            .nav-link:last-child {
+                border-bottom: none;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .services-grid,
+            .projects-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding: 4rem 0;
+            }
+            
+            /* Responsive adjustments for floating chatbot */
+            #floatingChatbotWrapper {
+                bottom: 1rem;
+                right: 1rem;
+                gap: 0.8rem;
+            }
+            #chatbotToggleButton {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+            #chatbotPanel {
+                width: 95vw;
+                height: 60vh;
+                max-width: none; /* Remove max-width for mobile to allow full width */
+                bottom: calc(100% + 0.8rem); /* Adjust distance from button */
+                right: 0; /* Align to the right edge of the screen */
+                left: 50%; /* Center the panel */
+                transform: translateX(-50%) translateY(10px) scale(0.95); /* Initial hidden state */
+                transform-origin: bottom center; /* Scale from bottom center */
+            }
+            #chatbotPanel.chatbot-open {
+                transform: translateX(-50%) translateY(0) scale(1);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .nav-container {
+                padding: 0 1rem;
+            }
+            
+            .hero-content {
+                padding: 0 1rem;
+            }
+            
+            .service-card,
+            .contact-info,
+            .contact-form {
+                padding: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-card {
+                min-width: auto;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Touch device optimizations */
+        @media (pointer: coarse) {
+            .nav-link,
+            .btn,
+            .theme-toggle {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        /* Reduced motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .navbar,
+            .floating-elements,
+            .back-to-top,
+            #floatingChatbotWrapper { /* Chatbot wrapper'ı da print'te gizle */
+                display: none !important;
+            }
+            
+            .hero {
+                background: none !important;
+                color: black !important;
+            }
+            
+            .section {
+                padding: 2rem 0 !important;
+            }
+        }
+
+        /* Modal (Açılır Pencere) Stilleri */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none; /* Varsayılan olarak gizli */
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+        .modal-overlay.show {
+            display: flex; /* Göstermek için bunu kullanacağız */
+        }
+        .modal-content {
+            background: var(--bg-primary);
+            padding: 2rem;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px var(--shadow-lg);
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            animation: fadeIn 0.3s ease;
+        }
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            line-height: 1;
+        }
+        .modal-content h3 {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        .modal-content p {
+            color: var(--text-secondary);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">RY</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#case-study" class="nav-link">Case Study</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>🚀</span>
+                Available for AI Projects
+            </div>
+            <h1 class="hero-title">Rıdvan Yiğit</h1>
+            <p class="hero-subtitle">AI Engineer & Autonomous Agent Developer</p>
+            <p class="hero-description">
+                I architect autonomous agent systems that streamline your business operations. Leveraging powerful tools like Agents SDK, CrewAI, LangGraph, AutoGen, MCP, I deliver robust prototypes, fast. My engineering-first approach means you get clear solutions, not confusing black boxes. Based in Vienna, my goal is simple: to make your business more efficient and more profitable.
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">🤖</span>
+                     <span class="stat-label">Autonomous Agents</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">🧠</span>
+                    <span class="stat-label">LangChain, Agents SDK, CrewAI, <br> LangGraph, AutoGen, MCP</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">⚡</span>
+                    <span class="stat-label">AI System Backend & <br> AI Integration & APIs</span>
+                </div>
+            </div>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <span>🎯</span>
+                    View My Work
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>💬</span>
+                    Let's Talk
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">About Me</div>
+                <h2 class="section-title">Building Intelligent AI for Your Business Goals</h2>
+                <p class="section-subtitle">
+                    From Hakkari to Vienna: A journey of passion, innovation, and AI excellence
+                </p>
+            </div>
+            <div class="about-content">
+                <div class="animate-on-scroll">
+                    <p class="about-text">
+                        I'm a passionate <span class="about-highlight">AI Engineer</span> specializing in building 
+                        autonomous agent systems that revolutionize how businesses operate. With deep expertise in 
+                        <span class="about-highlight">OpenAI Agents SDK, CrewAI, LangChain, LangGraph, AutoGen and MCP</span> technologies, I create 
+                        intelligent solutions that automate complex workflows and drive real business value.
+                    </p>
+                    <div class="about-journey">
+                        <h4><strong>My Journey:</strong></h4>
+                        <p>
+                            Born in the mountains of Hakkari, Turkey, I discovered my passion for technology early. 
+                            Now thriving in Vienna's dynamic tech ecosystem, I bridge the gap between cutting-edge 
+                            AI research and practical business applications. My multicultural background gives me 
+                            unique insights into solving diverse technical challenges.
+                        </p>
+                    </div>
+                </div>
+                <div class="skills-grid animate-on-scroll">
+                    <div class="skill-card">
+                        <div class="skill-icon">🤖</div>
+                        <h3 class="skill-title">Agentic AI Systems</h3>
+                        <p class="skill-description">LangChain, LangGraph, CrewAI, AutoGen, Multi-agent orchestration</p>
+                        <div class="skill-level">
+                            <span>Expert</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">⚡</div>
+                        <h3 class="skill-title">Backend Development</h3>
+                        <p class="skill-description">Python, FastAPI, Docker, API Development</p>
+                        <div class="skill-level">
+                            <span>Advanced</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🧠</div>
+                        <h3 class="skill-title">Machine Learning</h3>
+                        <p class="skill-description">Deep Learning, NLP, Computer Vision, MLOps</p>
+                        <div class="skill-level">
+                            <span>Advanced</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🌐</div>
+                        <h3 class="skill-title">Web Development & AI Interfaces</h3>
+                        <p class="skill-description">Building interactive UIs for AI applications with Gradio, Streamlit, and foundational web technologies (JavaScript, HTML5, CSS).</p>
+                        <div class="skill-level">
+                            <span>Proficient</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">📈</div>
+                        <h3 class="skill-title">Custom AI Solution Development</h3>
+                        <p class="skill-description">Business Analysis, Problem Analysis, AI Agent Design, System Integration </p>
+                        <div class="skill-level">
+                            <span>Expert</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Services</div>
+                <h2 class="section-title">AI Solutions That Deliver</h2>
+                <p class="section-subtitle">
+                    Comprehensive AI engineering services designed to transform your business operations
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-header">
+                        <div class="service-icon">🤖</div>
+                        <div class="service-badge">Most Popular</div>
+                    </div>
+                    <h3 class="service-title">Custom AI Agent Development</h3>
+                    <p class="service-description">
+                        Design and build bespoke AI agent crews using LangChain, CrewAI, LangGraph and AutoGen frameworks. 
+                        From concept to deployment, I create intelligent systems that work autonomously and efficiently.
+                    </p>
+                    <ul class="service-features">
+                        <li>Multi-agent system architecture</li>
+                        <li>Custom workflow automation</li>
+                        <li>Integration with existing systems</li>
+                        <li>Performance monitoring & optimization</li>
+                        <li>Complete documentation & training</li>
+                    </ul>
+                    <div class="service-price">Contact for a custom quote</div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-header">
+                        <div class="service-icon">🌐</div>
+                        <div class="service-badge">AI Integration</div>
+                    </div>
+                    <h3 class="service-title">AI-Powered Web Applications</h3>
+                    <p class="service-description">
+                        Modern, responsive websites with integrated AI capabilities. Combine beautiful design with 
+                        intelligent features like chatbots, recommendation systems, and automated content generation.
+                    </p>
+                    <ul class="service-features">
+                        <li>Responsive web development</li>
+                        <li>AI chatbot integration</li>
+                        <li>SEO optimization</li>
+                        <li>Performance optimization</li>
+                        <li>Analytics & insights dashboard</li>
+                    </ul>
+                    <div class="service-price">Contact for a custom quote</div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-header">
+                        <div class="service-icon">💡</div>
+                        <div class="service-badge">Strategic</div>
+                    </div>
+                    <h3 class="service-title">AI Strategy & Consulting</h3>
+                    <p class="service-description">
+                        Strategic guidance to identify AI opportunities, create implementation roadmaps, and ensure 
+                        successful AI adoption. Perfect for businesses ready to embrace AI transformation.
+                    </p>
+                    <ul class="service-features">
+                        <li>AI readiness assessment</li>
+                        <li>Custom strategy development</li>
+                        <li>Technology stack recommendations</li>
+                        <li>ROI analysis & projections</li>
+                        <li>Implementation guidance</li>
+                    </ul>
+                    <div class="service-price">Book a Strategy Session</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Portfolio</div>
+                <h2 class="section-title">Featured AI Projects</h2>
+                <p class="section-subtitle">
+                    Real-world applications of advanced AI technologies solving complex business challenges
+                </p>
+            </div>
+            <div class="projects-grid" role="list">
+
+                <!-- Project 1: Fine-Tuning for Price Prediction -->
+                <div class="project-card animate-on-scroll" role="listitem">
+                    <div class="project-header">
+                        <div class="project-icon" aria-hidden="true">🎯</div>
+                        <div class="project-status">R&D Project</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">LLM Fine-Tuning for Price Prediction</h3>
+                        <div class="project-metrics" role="list">
+                            <span role="listitem">🏆 $46 Avg. Error</span>
+                            <span role="listitem">🚀 Outperformed GPT-4o</span>
+                            <span role="listitem">💡 70% Success Rate</span>
+                        </div>
+                        <p class="project-description">
+                            Fine-tuned a Llama 3.1 model using the Q-LoRA technique to predict product prices from text descriptions. The resulting specialized model achieved a 70% success rate, significantly outperforming powerful proprietary models like GPT-4o on this specific regression task.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Fine-Tuning</span>
+                            <span class="tech-tag">Q-LoRA</span>
+                            <span class="tech-tag">Llama 3.1</span>
+                            <span class="tech-tag">Hugging Face</span>
+                            <span class="tech-tag">W&B</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#contact" class="project-link link-primary" aria-label="Learn more about LLM Fine-Tuning for Price Prediction">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: RAG System for a Knowledge Base -->
+                <div class="project-card animate-on-scroll" role="listitem">
+                    <div class="project-header">
+                        <div class="project-icon" aria-hidden="true">📚</div>
+                        <div class="project-status">Personal Project</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">RAG-Powered Q&A System</h3>
+                        <div class="project-metrics" role="list">
+                            <span role="listitem">⚡ LangChain & Manual RAG</span>
+                            <span role="listitem">💾 ChromaDB & FAISS</span>
+                            <span role="listitem">📊 3D Vector Visualization</span>
+                        </div>
+                        <p class="project-description">
+                            Developed a complete Retrieval-Augmented Generation (RAG) system for a knowledge base. The project involved manual implementation to grasp core concepts, followed by using LangChain, ChromaDB, and FAISS for efficient, accurate, and scalable Q&A.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">Vector DB</span>
+                            <span class="tech-tag">ChromaDB</span>
+                            <span class="tech-tag">FAISS</span>
+                            <span class="tech-tag">Plotly</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#contact" class="project-link link-primary" aria-label="Learn more about RAG-Powered Q&A System">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: crewAI - SDLC Automation -->
+                <div class="project-card animate-on-scroll" role="listitem">
+                    <div class="project-header">
+                        <div class="project-icon" aria-hidden="true">💻</div>
+                        <div class="project-status">Proof of Concept</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Autonomous SDLC Simulation with crewAI</h3>
+                        <div class="project-metrics" role="list">
+                            <span role="listitem">🤖 4-Agent Eng. Team</span>
+                            <span role="listitem">⚙️ YAML Configuration</span>
+                            <span role="listitem">🛡️ Safe Code Execution</span>
+                        </div>
+                        <p class="project-description">
+                            Built a simulated software engineering team using crewAI to automate the development lifecycle. The crew, configured via YAML, autonomously handles tasks from technical design and coding to unit testing within a secure Docker environment.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">crewAI</span>
+                            <span class="tech-tag">SDLC Automation</span>
+                            <span class="tech-tag">YAML Config</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Hierarchical Process</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#contact" class="project-link link-primary" aria-label="Learn more about crewAI SDLC Simulation">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: LangGraph - Self-Correcting Agent -->
+                <div class="project-card animate-on-scroll" role="listitem">
+                    <div class="project-header">
+                        <div class="project-icon" aria-hidden="true">🔄</div>
+                        <div class="project-status">R&D Project</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Self-Refining AI Assistant</h3>
+                        <div class="project-metrics" role="list">
+                            <span role="listitem">🧠 Stateful & Cyclical</span>
+                            <span role="listitem">💾 Persistent Memory</span>
+                            <span role="listitem">🔀 Conditional Logic</span>
+                        </div>
+                        <p class="project-description">
+                            Constructed a stateful agent using LangGraph capable of cyclical, self-correcting behavior. The agent evaluates its own output, refines it based on feedback in a loop, and maintains conversation history using persistent checkpointing with SQLite.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">LangGraph</span>
+                            <span class="tech-tag">State Management</span>
+                            <span class="tech-tag">Conditional Edges</span>
+                            <span class="tech-tag">Checkpointing</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#contact" class="project-link link-primary" aria-label="Learn more about LangGraph Self-Correcting Agent">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: OpenAI Agents - Deep Research Team -->
+                <div class="project-card animate-on-scroll" role="listitem">
+                    <div class="project-header">
+                        <div class="project-icon" aria-hidden="true">🔎</div>
+                        <div class="project-status">Personal Project</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Deep Research Agent Team</h3>
+                        <div class="project-metrics" role="list">
+                            <span role="listitem">👥 4 Specialized Agents</span>
+                            <span role="listitem">🔗 Automated Workflow</span>
+                            <span role="listitem">📤 Email Integration</span>
+                        </div>
+                        <p class="project-description">
+                            Designed and orchestrated a team of four specialized agents (planner, searcher, writer, emailer) using the OpenAI Agents SDK. This system automates complex research tasks from planning and web searches to report generation and final delivery via email.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">OpenAI Agents</span>
+                            <span class="tech-tag">Orchestration</span>
+                            <span class="tech-tag">Agent Handoff</span>
+                            <span class="tech-tag">Tool Use</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#contact" class="project-link link-primary" aria-label="Learn more about Deep Research Agent Team">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Multi-Modal Customer Service Assistant -->
+                <div class="project-card animate-on-scroll" role="listitem">
+                    <div class="project-header">
+                        <div class="project-icon" aria-hidden="true">🗣️</div>
+                        <div class="project-status">Proof of Concept</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Multi-Modal Customer Service Assistant</h3>
+                        <div class="project-metrics" role="list">
+                            <span role="listitem">🔊 Voice Output</span>
+                            <span role="listitem">🖼️ Image Generation</span>
+                            <span role="listitem">💬 Text-to-Speech</span>
+                        </div>
+                        <p class="project-description">
+                            Developed a multi-modal AI assistant for an airline's customer service. This chatbot can not only process and respond with text but also generate and deliver answers in voice and image formats, creating a richer user experience.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Multi-Modal</span>
+                            <span class="tech-tag">Gradio</span>
+                            <span class="tech-tag">OpenAI API</span>
+                            <span class="tech-tag">Whisper</span>
+                            <span class="tech-tag">TTS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#contact" class="project-link link-primary" aria-label="Learn more about Multi-Modal Customer Service Assistant">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Case Study Section -->
+    <section class="section about" id="case-study" style="background-color: var(--bg-primary);">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Project Case Study</div>
+                <h2 class="section-title">Fine-Tuning a Price Prediction LLM</h2>
+                <p class="section-subtitle">
+                    How a specialized Llama 3.1 model outperformed GPT-4o on a complex regression task.
+                </p>
+            </div>
+            <div class="about-content">
+                <div class="animate-on-scroll">
+                    <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">The Challenge</h3>
+                    <p class="about-text" style="margin-bottom: 2rem;">
+                        General-purpose models like GPT-4o often struggle with highly specific, niche tasks like predicting product prices from unstructured text descriptions. The goal was to create a specialized model that could accurately perform this regression task, delivering precise and reliable price predictions where generic models failed.
+                    </p>
+                    <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">My Approach & Solution</h3>
+                    <p class="about-text">
+                        I selected Llama 3.1 for its strong baseline performance and fine-tuned it using the memory-efficient Q-LoRA technique. The process involved meticulous data preparation, hyperparameter tuning, and rigorous evaluation using Weights & Biases for tracking experiments. This engineering-first approach ensured that every step was optimized for the final outcome.
+                    </p>
+                </div>
+                <div class="skills-grid animate-on-scroll">
+                    <div class="skill-card">
+                        <div class="skill-icon">🎯</div>
+                        <h3 class="skill-title">Exceptional Accuracy</h3>
+                        <p class="skill-description">Achieved an average error of just $46, proving the model's precision in a difficult prediction task.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🚀</div>
+                        <h3 class="skill-title">Outperformed Giants</h3>
+                        <p class="skill-description">The fine-tuned model significantly outperformed the much larger and more expensive GPT-4o, showing the power of specialization.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">💡</div>
+                        <h3 class="skill-title">High Success Rate</h3>
+                        <p class="skill-description">With a 70% success rate on predictions, the model demonstrated its reliability and business value for automated pricing tasks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview Section -->
+    <section class="section blog" id="blog">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Latest Insights</div>
+                <h2 class="section-title">AI Thoughts & Tutorials</h2>
+                <p class="section-subtitle">
+                    Stay updated with the latest AI trends, tutorials, and industry insights
+                </p>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card animate-on-scroll">
+                    <div class="blog-image">🤖</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>July 15, 2024</span>
+                            <span>AI Development</span>
+                        </div>
+                        <h3 class="blog-title">Building Your First CrewAI Multi-Agent System</h3>
+                        <p class="blog-excerpt">
+                            A comprehensive guide to creating intelligent agent crews that collaborate 
+                            to solve complex problems. Learn the fundamentals and best practices.
+                        </p>
+                        <a href="#" class="blog-link">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card animate-on-scroll">
+                    <div class="blog-image">🧠</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Jun 10, 2024</span>
+                            <span>Machine Learning</span>
+                        </div>
+                        <h3 class="blog-title">The Future of Autonomous AI Agents in Business</h3>
+                        <p class="blog-excerpt">
+                            Exploring how autonomous AI agents are transforming industries and 
+                            what businesses need to know to stay competitive.
+                        </p>
+                        <a href="#" class="blog-link">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card animate-on-scroll">
+                    <div class="blog-image">⚡</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Mar 5, 2024</span>
+                            <span>Tutorial</span>
+                        </div>
+                        <h3 class="blog-title">CrewAI vs LangGraph: Choosing the Right Framework</h3>
+                        <p class="blog-excerpt">
+                            A detailed comparison of popular AI frameworks to help you choose 
+                            the best tool for your specific use case and requirements.
+                        </p>
+                        <a href="#" class="blog-link">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Get In Touch</div>
+                <h2 class="section-title">Let's Build Something Amazing</h2>
+                <p class="section-subtitle">
+                    Ready to transform your business with AI? Let's discuss your project and create something extraordinary together.
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info animate-on-scroll">
+                    <div class="contact-intro">
+                        <h3>Let's Start the Conversation</h3>
+                        <p>Whether you need a custom AI solution, strategic guidance, or just want to explore the possibilities of AI for your business, I'm here to help.</p>
+                    </div>
+                    <div class="contact-items-wrapper">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-text">
+                                <strong>Email</strong>
+                                <a href="mailto:ridvanyigit@gmx.net">ridvanyigit@gmx.net</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">💼</div>
+                            <div class="contact-text">
+                                <strong>LinkedIn</strong>
+                                <a href="https://www.linkedin.com/in/ridvan-yigit-5494842b6/" target="_blank">Professional Network</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🚀</div>
+                            <div class="contact-text">
+                                <strong>GitHub</strong>
+                                <a href="https://github.com/ridvanyigit" target="_blank">Open Source Projects</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🤗</div>
+                            <div class="contact-text">
+                                <strong>Hugging Face</strong>
+                                <a href="https://huggingface.co/ridvanyigit" target="_blank">AI Models & Demos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-availability">
+                        <div class="availability-status">
+                            <div class="status-dot"></div>
+                            <strong>Currently Available</strong>
+                        </div>
+                        <span style="color: var(--text-secondary);">Open for new projects and consulting opportunities</span>
+                    </div>
+                </div>
+                <div class="contact-form animate-on-scroll">
+                    <h3>Send me a message</h3>
+                    <form id="contactForm" action="https://formspree.io/f/xldlqwpp" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name *</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" id="email" name="_replyto" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company" class="form-label">Company</label>
+                            <input type="text" id="company" name="company" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="project" class="form-label">Project Type</label>
+                            <select id="project" name="project" class="form-input">
+                                <option value="">Select a project type</option>
+                                <option value="ai-agents">AI Agent Development</option>
+                                <option value="web-dev">Web Development</option>
+                                <option value="consulting">AI Consulting</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget" class="form-label">Budget Range</label>
+                            <select id="budget" name="budget" class="form-input">
+                                <option value="">Select budget range</option>
+                                <option value="1k-5k">€1,000 - €5,000</option>
+                                <option value="5k-15k">€5,000 - €15,000</option>
+                                <option value="15k-50k">€15,000 - €50,000</option>
+                                <option value="50k+">€50,000+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea id="message" name="message" class="form-input form-textarea" required 
+                                placeholder="Tell me about your project, goals, and how I can help..."></textarea>
+                        </div>
+                        <div class="error-message" id="errorMessage"></div>
+                        <div class="success-message" id="successMessage"></div>
+                        <button type="submit" class="form-submit" id="submitBtn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Eski chatbot-container buradaydı, şimdi kaldırıldı -->
+        </div>
+    </section>
+
+    <!-- Floating Chatbot Wrapper -->
+    <div id="floatingChatbotWrapper">
+        <button id="chatbotToggleButton" aria-label="Toggle chatbot" aria-expanded="false">
+            <span class="chatbot-icon">🤖</span>
+            <span class="chatbot-close-icon">✕</span>
+        </button>
+        
+        <div id="chatbotPanel">
+            <div class="chatbot-header">
+                <h3>💬 Chat with My AI Assistant</h3>
+            </div>
+            
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message assistant">
+                    Hello! I'm Rıdvan's AI assistant. I can help you learn about his expertise in AI agent development, answer questions about his services, or discuss potential projects. How can I assist you today?
+                </div>
+            </div>
+            
+            <div class="chatbot-input-area">
+                <div id="chatbotError" class="error-message" style="display: none;"></div>
+                <div class="chatbot-input-container">
+                    <textarea 
+                        id="chatbotInput" 
+                        class="chatbot-input" 
+                        placeholder="Type your message..."
+                        rows="1"
+                        maxlength="1000"
+                    ></textarea>
+                    <button id="chatbotSendBtn" class="chatbot-send-btn" type="button">
+                        ➤
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Rıdvan Yiğit</h3>
+                    <p>AI Engineer & Autonomous Agent Developer based in Vienna. Transforming businesses with cutting-edge AI solutions.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/ridvan-yigit-5494842b6/" class="social-link" target="_blank" aria-label="LinkedIn">💼</a>
+                        <a href="https://github.com/ridvanyigit" class="social-link" target="_blank" aria-label="GitHub">🚀</a>
+                        <a href="https://huggingface.co/ridvanyigit" class="social-link" target="_blank" aria-label="Hugging Face">🤗</a>
+                        <a href="mailto:ridvanyigit@gmx.net" class="social-link" aria-label="Email">📧</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">AI Agent Development</a></li>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">AI Consulting</a></li>
+                        <li><a href="#contact">Custom Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#projects">Portfolio</a></li>
+                        <li><a href="#" class="legal-link">Case Studies</a></li>
+                        <li><a href="#" class="legal-link">AI Tools</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="legal-link">Privacy Policy</a></li>
+                        <li><a href="#" class="legal-link">Terms of Service</a></li>
+                        <li><a href="#" class="legal-link">Cookie Policy</a></li>
+                        <li><a href="#" class="legal-link">Imprint</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rıdvan Yiğit. All rights reserved. | Built with passion in Vienna 🇦🇹 | Powered by AI</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <!-- Modal (Açılır Pencere) Yapısı -->
+    <div id="legal-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="modal-close-btn" class="modal-close">&times;</button>
+            <h3 id="modal-title"></h3>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <script>
+        // Initialize all components when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            window.chatbotManager = new ChatbotManager();
+            initializeComponents();
+        });
+
+        function initializeComponents() {
+            // Hide loading screen
+            setTimeout(() => {
+                document.getElementById('loadingScreen').classList.add('hidden');
+            }, 1000);
+
+            // Initialize all features
+            initializeNavigation();
+            initializeTheme();
+            initializeCursor();
+            initializeScrollEffects();
+            initializeAnimations();
+            initializeContactForm();
+            initializeModal();
+            // Bu satırı eklemeyin çünkü chatbot artık DOMContentLoaded'da otomatik başlayacak
+            initializePerformanceOptimizations();
+        }
+        
+        // Modal fonksiyonu
+        function initializeModal() {
+            const modal = document.getElementById('legal-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalText = document.getElementById('modal-text');
+            const closeModalBtn = document.getElementById('modal-close-btn');
+            const legalLinks = document.querySelectorAll('.legal-link');
+
+            if (!modal || !modalTitle || !modalText || !closeModalBtn) {
+                console.error("Modal elements not found!");
+                return;
+            }
+
+            function openModal(title, text) {
+                modalTitle.textContent = title;
+                modalText.textContent = text;
+                modal.classList.add('show');
+            }
+
+            function closeModal() {
+                modal.classList.remove('show');
+            }
+
+            legalLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const linkText = link.textContent;
+                    const comingSoonMessage = 'This page is currently under construction and will be available soon. For any questions, please feel free to reach out via the contact form.';
+                    openModal(linkText, comingSoonMessage);
+                });
+            });
+
+            closeModalBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+        }
+
+        // Navigation functionality
+        function initializeNavigation() {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const navLinks = document.getElementById('navLinks');
+            
+            mobileMenuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                mobileMenuToggle.innerHTML = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            // Close mobile menu when clicking on links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    mobileMenuToggle.innerHTML = '☰';
+                });
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const offsetTop = target.offsetTop - 100;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Theme toggle functionality
+        function initializeTheme() {
+            const themeToggle = document.getElementById('themeToggle');
+            
+            // Load saved theme or default to light
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                document.documentElement.setAttribute('data-theme', newTheme);
+                themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+                localStorage.setItem('theme', newTheme);
+
+                // Update navbar background if theme changes while scrolled
+                const navbar = document.getElementById('navbar');
+                if (window.pageYOffset > 100) {
+                    navbar.style.background = newTheme === 'dark' 
+                        ? 'rgba(15, 23, 42, 0.95)' 
+                        : 'rgba(255, 255, 255, 0.95)';
+                }
+            });
+        }
+
+        // Custom cursor functionality
+        function initializeCursor() {
+            const cursor = document.getElementById('cursor');
+            
+            if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+                document.addEventListener('mousemove', (e) => {
+                    cursor.style.left = e.clientX - 10 + 'px';
+                    cursor.style.top = e.clientY - 10 + 'px';
+                });
+
+                // Interactive cursor effects
+                document.querySelectorAll('a, button, .card, .btn').forEach(el => {
+                    el.addEventListener('mouseenter', () => {
+                        cursor.style.transform = 'scale(2)';
+                        cursor.style.borderColor = 'var(--primary)';
+                    });
+                    
+                    el.addEventListener('mouseleave', () => {
+                        cursor.style.transform = 'scale(1)';
+                        cursor.style.borderColor = 'var(--primary)';
+                    });
+                });
+            }
+        }
+
+        // Scroll effects and animations
+        function initializeScrollEffects() {
+            let ticking = false;
+            const navbar = document.getElementById('navbar');
+            const progressBar = document.getElementById('progressBar');
+            const backToTop = document.getElementById('backToTop');
+
+            function updateScrollEffects() {
+                const scrolled = window.pageYOffset;
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.documentElement.scrollHeight;
+                
+                // Update navbar
+                if (scrolled > 100) {
+                    navbar.style.background = document.documentElement.getAttribute('data-theme') === 'dark' 
+                        ? 'rgba(15, 23, 42, 0.95)' 
+                        : 'rgba(255, 255, 255, 0.95)';
+                    navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+                } else {
+                    navbar.style.background = document.documentElement.getAttribute('data-theme') === 'dark' 
+                        ? 'rgba(15, 23, 42, 0.9)' 
+                        : 'rgba(255, 255, 255, 0.9)';
+                    navbar.style.boxShadow = 'none';
+                }
+
+                // Update progress bar
+                const scrollProgress = (scrolled / (documentHeight - windowHeight)) * 100;
+                progressBar.style.width = Math.min(scrollProgress, 100) + '%';
+
+                // Show/hide back to top button
+                if (scrolled > 500) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+
+                // Update hero parallax
+                const heroContent = document.querySelector('.hero-content');
+                if (heroContent && scrolled < windowHeight) {
+                    heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+                }
+                
+                ticking = false;
+            }
+
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(updateScrollEffects);
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener('scroll', requestTick);
+
+            // Back to top functionality
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Animation system
+        function initializeAnimations() {
+            // Intersection Observer for scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                        
+                        // Animate skill levels
+                        if (entry.target.classList.contains('skill-card')) {
+                            const levelFill = entry.target.querySelector('.level-fill');
+                            if (levelFill) {
+                                setTimeout(() => {
+                                    levelFill.style.width = levelFill.style.width;
+                                }, 500);
+                            }
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all elements with animate-on-scroll class
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Counter animation
+            const counters = document.querySelectorAll('.counter');
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        let current = 0;
+                        const increment = target / 100;
+                        
+                        const updateCounter = () => {
+                            if (current < target) {
+                                current += increment;
+                                counter.textContent = Math.ceil(current);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.textContent = target;
+                            }
+                        };
+                        
+                        updateCounter();
+                        counterObserver.unobserve(counter);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            counters.forEach(counter => {
+                counterObserver.observe(counter);
+            });
+
+            // Enhanced hover effects for cards
+            document.querySelectorAll('.service-card, .project-card, .skill-card').forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    if (window.matchMedia('(hover: hover)').matches) {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        
+                        const centerX = rect.width / 2;
+                        const centerY = rect.height / 2;
+                        
+                        const rotateX = (y - centerY) / 20;
+                        const rotateY = (centerX - x) / 20;
+                        
+                        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+                    }
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+                });
+            });
+        }
+
+        // Contact form functionality
+        function initializeContactForm() {
+            const form = document.getElementById('contactForm');
+            if (form) {
+                const inputs = form.querySelectorAll('input, textarea, select');
+                inputs.forEach(input => {
+                    input.addEventListener('blur', () => {
+                        validateField(input);
+                    });
+                });
+            }
+        }
+
+        // Field validation
+        function validateField(field) {
+            const value = field.value.trim();
+            let isValid = true;
+
+            // Reset field styles
+            field.style.borderColor = 'var(--border)';
+
+            if (field.hasAttribute('required') && !value) {
+                isValid = false;
+            } else if (field.type === 'email' && value && !isValidEmail(value)) {
+                isValid = false;
+            }
+
+            if (!isValid) {
+                field.style.borderColor = 'var(--error)';
+            }
+
+            return isValid;
+        }
+
+        // Email validation
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Floating Chatbot functionality
+        // Enhanced Chatbot Implementation
+        class ChatbotManager {
+            constructor() {
+                this.conversationId = this.generateConversationId();
+                this.chatHistory = [];
+                this.isLoading = false;
+                this.initializeElements();
+                this.bindEvents();
+                this.apiBaseUrl = window.location.origin;
+            }
+
+            generateConversationId() {
+                return 'conv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+            }
+
+            initializeElements() {
+                this.toggleButton = document.getElementById('chatbotToggleButton');
+                this.panel = document.getElementById('chatbotPanel');
+                this.messagesContainer = document.getElementById('chatbotMessages');
+                this.input = document.getElementById('chatbotInput');
+                this.sendButton = document.getElementById('chatbotSendBtn');
+                this.errorContainer = document.getElementById('chatbotError');
+            }
+
+            bindEvents() {
+                // Toggle chatbot
+                this.toggleButton.addEventListener('click', () => this.toggleChatbot());
+                
+                // Send message on button click
+                this.sendButton.addEventListener('click', () => this.sendMessage());
+                
+                // Send message on Enter key (Shift+Enter for new line)
+                this.input.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                        e.preventDefault();
+                        this.sendMessage();
+                    }
+                });
+
+                // Auto-resize textarea
+                this.input.addEventListener('input', () => this.autoResizeTextarea());
+
+                // Close chatbot when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!this.panel.contains(e.target) && 
+                        !this.toggleButton.contains(e.target) && 
+                        this.panel.classList.contains('chatbot-open')) {
+                        this.toggleChatbot();
+                    }
+                });
+            }
+
+            toggleChatbot() {
+                const isOpen = this.panel.classList.toggle('chatbot-open');
+                this.toggleButton.setAttribute('aria-expanded', isOpen);
+                
+                if (isOpen) {
+                    this.input.focus();
+                }
+            }
+
+            autoResizeTextarea() {
+                this.input.style.height = 'auto';
+                this.input.style.height = Math.min(this.input.scrollHeight, 100) + 'px';
+            }
+
+            async sendMessage() {
+                const message = this.input.value.trim();
+                if (!message || this.isLoading) return;
+
+                // Clear error
+                this.hideError();
+
+                // Add user message to UI
+                this.addMessage('user', message);
+                
+                // Clear input
+                this.input.value = '';
+                this.autoResizeTextarea();
+
+                // Add to history
+                this.chatHistory.push({ role: 'user', content: message });
+
+                // Show loading
+                this.setLoading(true);
+                const loadingMessage = this.addLoadingMessage();
+
+                try {
+                    const response = await this.callChatAPI(message);
+                    
+                    // Remove loading message
+                    this.removeMessage(loadingMessage);
+                    
+                    // Add AI response
+                    this.addMessage('assistant', response.response);
+                    
+                    // Update conversation ID and history
+                    this.conversationId = response.conversation_id;
+                    this.chatHistory.push({ role: 'assistant', content: response.response });
+
+                } catch (error) {
+                    // Remove loading message
+                    this.removeMessage(loadingMessage);
+                    
+                    // Show error
+                    this.showError(error.message || 'Sorry, I encountered an error. Please try again.');
+                    console.error('Chatbot error:', error);
+                } finally {
+                    this.setLoading(false);
+                }
+            }
+
+            async callChatAPI(message) {
+                const payload = {
+                    message: message,
+                    conversation_id: this.conversationId,
+                    history: this.chatHistory.slice(-10) // Send last 10 messages
+                };
+
+                const response = await fetch(`${this.apiBaseUrl}/api/chat`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(errorData.detail || errorData.error || `HTTP ${response.status}`);
+                }
+
+                return await response.json();
+            }
+
+            addMessage(role, content) {
+                const messageElement = document.createElement('div');
+                messageElement.className = `message ${role}`;
+                messageElement.textContent = content;
+                
+                this.messagesContainer.appendChild(messageElement);
+                this.scrollToBottom();
+                
+                return messageElement;
+            }
+
+            addLoadingMessage() {
+                const messageElement = document.createElement('div');
+                messageElement.className = 'message loading';
+                messageElement.innerHTML = `
+                    <div class="typing-indicator">
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                    </div>
+                `;
+                
+                this.messagesContainer.appendChild(messageElement);
+                this.scrollToBottom();
+                
+                return messageElement;
+            }
+
+            removeMessage(messageElement) {
+                if (messageElement && messageElement.parentNode) {
+                    messageElement.parentNode.removeChild(messageElement);
+                }
+            }
+
+            setLoading(loading) {
+                this.isLoading = loading;
+                this.sendButton.disabled = loading;
+                this.input.disabled = loading;
+            }
+
+            scrollToBottom() {
+                setTimeout(() => {
+                    this.messagesContainer.scrollTop = this.messagesContainer.scrollHeight;
+                }, 100);
+            }
+
+            showError(message) {
+                this.errorContainer.textContent = message;
+                this.errorContainer.style.display = 'block';
+            }
+
+            hideError() {
+                this.errorContainer.style.display = 'none';
+            }
+        }
+
+        // Performans optimizasyonları
+        function initializePerformanceOptimizations() {
+            // Pasif (passive) olay dinleyicilerini kullanarak kaydırma performansını iyileştirme
+            document.addEventListener('scroll', () => {
+                // Kaydırma ile ilgili işlemler
+            }, { passive: true });
+        }
+    </script>
+</body>
+</html>
