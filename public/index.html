@@ -1736,7 +1736,7 @@
                 padding: 4rem 0;
             }
             
-            /* Responsive adjustments for floating chatbot */
+            /* UPDATED: Responsive adjustments for floating chatbot */
             #floatingChatbotWrapper {
                 bottom: 1rem;
                 right: 1rem;
@@ -1749,16 +1749,18 @@
             }
             #chatbotPanel {
                 width: 95vw;
-                height: 60vh;
-                max-width: none; /* Remove max-width for mobile to allow full width */
+                height: 70vh; /* Increased height slightly for better usability */
+                max-width: 400px; /* Added max-width to prevent it being too wide on tablets */
                 bottom: calc(100% + 0.8rem); /* Adjust distance from button */
-                right: 0; /* Align to the right edge of the screen */
-                left: 50%; /* Center the panel */
-                transform: translateX(-50%) translateY(10px) scale(0.95); /* Initial hidden state */
-                transform-origin: bottom center; /* Scale from bottom center */
+                
+                /* Centering Logic */
+                right: 50%; 
+                transform: translateX(50%) translateY(10px) scale(0.95);
+                transform-origin: bottom right; 
             }
+
             #chatbotPanel.chatbot-open {
-                transform: translateX(-50%) translateY(0) scale(1);
+                transform: translateX(50%) translateY(0) scale(1);
             }
         }
 
@@ -1791,6 +1793,16 @@
 
             .hero-title {
                 font-size: 2.5rem;
+            }
+
+            /* Further refinement for small phones */
+            #chatbotPanel {
+                right: 0;
+                left: auto;
+                transform: translateY(10px) scale(0.95);
+            }
+            #chatbotPanel.chatbot-open {
+                transform: translateY(0) scale(1);
             }
         }
 
