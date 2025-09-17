@@ -5,7 +5,8 @@
       "src": "api/main.py",
       "use": "@vercel/python",
       "config": {
-        "maxLambdaSize": "15mb"
+        "maxLambdaSize": "15mb",
+        "maxDuration": 30
       }
     },
     {
@@ -22,15 +23,5 @@
       "src": "/(.*)",
       "dest": "public/$1"
     }
-  ],
-  "env": {
-    "OPENAI_API_KEY": "@openai_api_key",
-    "ENVIRONMENT": "production",
-    "LOG_LEVEL": "INFO"
-  },
-  "functions": {
-    "api/main.py": {
-      "maxDuration": 30
-    }
-  }
+  ]
 }
