@@ -400,7 +400,7 @@
             margin-bottom: 3rem;
             animation: fadeInUp 1s ease 0.8s both;
         }
-
+        
         .stat-item {
             text-align: center;
         }
@@ -410,6 +410,11 @@
             font-size: 2rem;
             font-weight: 700;
             color: white;
+            height: 40px; /* To prevent layout shift */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
         }
 
         .stat-label {
@@ -820,6 +825,11 @@
             color: white;
             text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
+        
+        .project-icon svg {
+             width: 64px;
+             height: 64px;
+        }
 
         .project-status {
             position: absolute;
@@ -908,80 +918,6 @@
             transform: translateY(-2px);
         }
 
-        /* Blog Preview Section */
-        .blog {
-            background: var(--bg-secondary);
-        }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .blog-card {
-            background: var(--bg-primary);
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px var(--shadow);
-            transition: var(--transition);
-            border: 1px solid var(--border);
-        }
-
-        .blog-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 60px var(--shadow-lg);
-        }
-
-        .blog-image {
-            height: 200px;
-            background: var(--gradient-bg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: white;
-        }
-
-        .blog-content {
-            padding: 2rem;
-        }
-
-        .blog-meta {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        .blog-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            line-height: 1.4;
-        }
-
-        .blog-excerpt {
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .blog-link {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-        }
-
-        .blog-link:hover {
-            color: var(--primary-dark);
-        }
-
         /* Contact Section */
         .contact-content {
             display: grid;
@@ -1054,6 +990,11 @@
             color: white;
             font-size: 1.2rem;
             flex-shrink: 0;
+        }
+
+        .contact-icon svg {
+             width: 24px;
+             height: 24px;
         }
 
         .contact-text strong {
@@ -1480,7 +1421,7 @@
 
         .footer-content {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr 1fr;
             gap: 3rem;
             margin-bottom: 2rem;
         }
@@ -1518,6 +1459,11 @@
             text-decoration: none;
             transition: var(--transition);
             border: 1px solid var(--border);
+        }
+        
+        .social-link svg {
+            width: 20px;
+            height: 20px;
         }
 
         .social-link:hover {
@@ -1664,6 +1610,9 @@
             
             .section {
                 padding: 6rem 0;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -1956,7 +1905,6 @@
                 <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#case-study" class="nav-link">Case Study</a></li>
-                <li><a href="#blog" class="nav-link">Blog</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-controls">
@@ -1971,36 +1919,42 @@
         <div class="hero-bg"></div>
         <div class="hero-content">
             <div class="hero-badge">
-                <span>🚀</span>
-                Available for AI Projects
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rocket"><path d="M6.2 21.8a2.2 2.2 0 0 1-2.2-2.2c0-2.3 1.2-4.1 2.6-5.1.5-.4 1.1-.7 1.6-.9.4-.2.8-.3 1.2-.4.4-.1.9-.1 1.3 0 .5.1 1 .2 1.5.4.5.2 1 .5 1.5.8.6.3 1.1.7 1.6 1.1 1.4 1 2.6 2.8 2.6 5.1a2.2 2.2 0 0 1-2.2 2.2H6.2z"></path><path d="M12 2c0-1.1.9-2 2-2s2 .9 2 2v2h-4V2z"></path><path d="M12 11.1V6.2c0-1.8 1.4-3.2 3.2-3.2H17c.5 0 1 .2 1.4.6.4.4.6 1 .6 1.4v1.8c0 1.8-1.4 3.2-3.2 3.2h-1.8c-.5 0-1-.2-1.4-.6-.4-.4-.6-1-.6-1.4z"></path></svg>
+                <span>Available for AI Projects</span>
             </div>
             <h1 class="hero-title">Rıdvan Yiğit</h1>
             <p class="hero-subtitle">AI Engineer & Autonomous Agent Developer</p>
             <p class="hero-description">
-                I architect autonomous agent systems that streamline your business operations. Leveraging powerful tools like Agents SDK, CrewAI, LangGraph, AutoGen, MCP, I deliver robust prototypes, fast. My engineering-first approach means you get clear solutions, not confusing black boxes. Based in Vienna, my goal is simple: to make your business more efficient and more profitable.
+                I architect autonomous agent systems that streamline your business operations. Leveraging powerful tools like Agents SDK, CrewAI, LangGraph, MCP, I deliver robust prototypes, fast. My engineering-first approach means you get clear solutions, not confusing black boxes. Based in Vienna, my goal is simple: to make your business more efficient and more profitable.
             </p>
             <div class="hero-stats">
                 <div class="stat-item">
-                    <span class="stat-number">🤖</span>
+                    <span class="stat-number">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="4" width="6" height="8" rx="2"></rect><path d="M12 12v4"></path><path d="M8 16h8"></path><path d="M12 20v2"></path><path d="M9 16l-1-1"></path><path d="M15 16l1-1"></path></svg>
+                    </span>
                      <span class="stat-label">Autonomous Agents</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">🧠</span>
-                    <span class="stat-label">LangChain, Agents SDK, CrewAI, <br> LangGraph, AutoGen, MCP</span>
+                    <span class="stat-number">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5a.5.5 0 0 0-1 0V5h1V2.5zM12 6a.5.5 0 0 0-1 0v2h1V6zm0 3a.5.5 0 0 0-1 0v2h1V9zm0 3a.5.5 0 0 0-1 0v2h1v-2zm0 3a.5.5 0 0 0-1 0v2h1v-2zM12 18a.5.5 0 0 0-1 0v2.5h1V18z"></path><path d="M15.5 2.5a.5.5 0 0 0-1 0V5h1V2.5zM15.5 6a.5.5 0 0 0-1 0v8h1V6zM15.5 15a.5.5 0 0 0-1 0v2.5h1V15z"></path><path d="M8.5 2.5a.5.5 0 0 0-1 0V5h1V2.5zM8.5 6a.5.5 0 0 0-1 0v8h1V6zM8.5 15a.5.5 0 0 0-1 0v2.5h1V15z"></path><path d="M5 2.5a.5.5 0 0 0-1 0V5h1V2.5zM5 6a.5.5 0 0 0-1 0v2h1V6zm0 3a.5.5 0 0 0-1 0v2h1V9zm0 3a.5.5 0 0 0-1 0v2h1v-2zm0 3a.5.5 0 0 0-1 0v2.5h1V18z"></path><path d="M19 2.5a.5.5 0 0 0-1 0V5h1V2.5zM19 6a.5.5 0 0 0-1 0v2h1V6zm0 3a.5.5 0 0 0-1 0v2h1V9zm0 3a.5.5 0 0 0-1 0v2h1v-2zm0 3a.5.5 0 0 0-1 0v2.5h1V18z"></path></svg>
+                    </span>
+                    <span class="stat-label">LangChain, Agents SDK, CrewAI, <br> LangGraph, MCP</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">⚡</span>
+                    <span class="stat-number">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8.7a2 2 0 0 0-1.2-1.8L12 5 7.2 6.9a2 2 0 0 0-1.2 1.8v6.6a2 2 0 0 0 1.2 1.8L12 19l4.8-1.9a2 2 0 0 0 1.2-1.8V8.7z"></path><path d="m12 5-2.8 1.4"></path><path d="m12 19 2.8-1.4"></path><path d="m12 12 4.8 2.4"></path><path d="M12 12V5"></path><path d="M12 12 7.2 9.6"></path></svg>
+                    </span>
                     <span class="stat-label">AI System Backend & <br> AI Integration & APIs</span>
                 </div>
             </div>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">
-                    <span>🎯</span>
-                    View My Work
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                    <span>View My Work</span>
                 </a>
                 <a href="#contact" class="btn btn-secondary">
-                    <span>💬</span>
-                    Let's Talk
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                    <span>Let's Talk</span>
                 </a>
             </div>
         </div>
@@ -2012,9 +1966,6 @@
             <div class="section-header animate-on-scroll">
                 <div class="section-badge">About Me</div>
                 <h2 class="section-title">Building Intelligent AI for Your Business Goals</h2>
-                <p class="section-subtitle">
-                    From Hakkari to Vienna: A journey of passion, innovation, and AI excellence
-                </p>
             </div>
             <div class="about-content">
                 <div class="animate-on-scroll">
@@ -2036,7 +1987,7 @@
                 </div>
                 <div class="skills-grid animate-on-scroll">
                     <div class="skill-card">
-                        <div class="skill-icon">🤖</div>
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"></path><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M8 12h8"></path><path d="M12 16h4"></path></svg></div>
                         <h3 class="skill-title">Agentic AI Systems</h3>
                         <p class="skill-description">LangChain, LangGraph, CrewAI, AutoGen, Multi-agent orchestration</p>
                         <div class="skill-level">
@@ -2047,7 +1998,7 @@
                         </div>
                     </div>
                     <div class="skill-card">
-                        <div class="skill-icon">⚡</div>
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg></div>
                         <h3 class="skill-title">Backend Development</h3>
                         <p class="skill-description">Python, FastAPI, Docker, API Development</p>
                         <div class="skill-level">
@@ -2058,7 +2009,7 @@
                         </div>
                     </div>
                     <div class="skill-card">
-                        <div class="skill-icon">🧠</div>
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v2a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path><path d="M12 11a3 3 0 0 0-3 3v2a3 3 0 0 0 6 0v-2a3 3 0 0 0-3-3z"></path><path d="M5 12a3 3 0 0 0-3 3v2a3 3 0 0 0 6 0v-2a3 3 0 0 0-3-3z"></path><path d="M19 12a3 3 0 0 0-3 3v2a3 3 0 0 0 6 0v-2a3 3 0 0 0-3-3z"></path></svg></div>
                         <h3 class="skill-title">Machine Learning</h3>
                         <p class="skill-description">Deep Learning, NLP, Computer Vision, MLOps</p>
                         <div class="skill-level">
@@ -2069,7 +2020,7 @@
                         </div>
                     </div>
                     <div class="skill-card">
-                        <div class="skill-icon">🌐</div>
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div>
                         <h3 class="skill-title">Web Development & AI Interfaces</h3>
                         <p class="skill-description">Building interactive UIs for AI applications with Gradio, Streamlit, and foundational web technologies (JavaScript, HTML5, CSS).</p>
                         <div class="skill-level">
@@ -2080,7 +2031,7 @@
                         </div>
                     </div>
                     <div class="skill-card">
-                        <div class="skill-icon">📈</div>
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
                         <h3 class="skill-title">Custom AI Solution Development</h3>
                         <p class="skill-description">Business Analysis, Problem Analysis, AI Agent Design, System Integration </p>
                         <div class="skill-level">
@@ -2108,7 +2059,7 @@
             <div class="services-grid">
                 <div class="service-card animate-on-scroll">
                     <div class="service-header">
-                        <div class="service-icon">🤖</div>
+                        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"></path><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M8 12h8"></path><path d="M12 16h4"></path></svg></div>
                         <div class="service-badge">Most Popular</div>
                     </div>
                     <h3 class="service-title">Custom AI Agent Development</h3>
@@ -2127,7 +2078,7 @@
                 </div>
                 <div class="service-card animate-on-scroll">
                     <div class="service-header">
-                        <div class="service-icon">🌐</div>
+                        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 21h4V11h-4v10zM5 21h4V3H5v18zM15 21h4V7h-4v14z"></path></svg></div>
                         <div class="service-badge">AI Integration</div>
                     </div>
                     <h3 class="service-title">AI-Powered Web Applications</h3>
@@ -2146,7 +2097,7 @@
                 </div>
                 <div class="service-card animate-on-scroll">
                     <div class="service-header">
-                        <div class="service-icon">💡</div>
+                        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.73 18.23a1.43 1.43 0 0 1-1.21.77H3.48a1.42 1.42 0 0 1-1.22-.78 1.48 1.48 0 0 1 .22-1.46l5.1-6.14a1.42 1.42 0 0 1 1.22-.55h6.4a1.42 1.42 0 0 1 1.22.55l5.1 6.14a1.42 1.42 0 0 1 .21 1.47z"></path><path d="M12 21v-2"></path><path d="M12 3v2"></path><path d="M12 9a4 4 0 0 0-4 4"></path></svg></div>
                         <div class="service-badge">Strategic</div>
                     </div>
                     <h3 class="service-title">AI Strategy & Consulting</h3>
@@ -2182,7 +2133,7 @@
                 <!-- Project 1: Fine-Tuning for Price Prediction -->
                 <div class="project-card animate-on-scroll" role="listitem">
                     <div class="project-header">
-                        <div class="project-icon" aria-hidden="true">🎯</div>
+                        <div class="project-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
                         <div class="project-status">R&D Project</div>
                     </div>
                     <div class="project-content">
@@ -2211,7 +2162,7 @@
                 <!-- Project 2: RAG System for a Knowledge Base -->
                 <div class="project-card animate-on-scroll" role="listitem">
                     <div class="project-header">
-                        <div class="project-icon" aria-hidden="true">📚</div>
+                        <div class="project-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></div>
                         <div class="project-status">Personal Project</div>
                     </div>
                     <div class="project-content">
@@ -2241,7 +2192,7 @@
                 <!-- Project 3: crewAI - SDLC Automation -->
                 <div class="project-card animate-on-scroll" role="listitem">
                     <div class="project-header">
-                        <div class="project-icon" aria-hidden="true">💻</div>
+                        <div class="project-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></div>
                         <div class="project-status">Proof of Concept</div>
                     </div>
                     <div class="project-content">
@@ -2270,7 +2221,7 @@
                 <!-- Project 4: LangGraph - Self-Correcting Agent -->
                 <div class="project-card animate-on-scroll" role="listitem">
                     <div class="project-header">
-                        <div class="project-icon" aria-hidden="true">🔄</div>
+                        <div class="project-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12c0 4.4-3.6 8-8 8s-8-3.6-8-8 3.6-8 8-8"></path><path d="M12 20a8 8 0 0 0 8-8"></path><path d="M12 4a8 8 0 0 1 8 8"></path><path d="m12 12 4 4"></path><path d="m16 12-4 4"></path></svg></div>
                         <div class="project-status">R&D Project</div>
                     </div>
                     <div class="project-content">
@@ -2298,7 +2249,7 @@
                 <!-- Project 5: OpenAI Agents - Deep Research Team -->
                 <div class="project-card animate-on-scroll" role="listitem">
                     <div class="project-header">
-                        <div class="project-icon" aria-hidden="true">🔎</div>
+                        <div class="project-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
                         <div class="project-status">Personal Project</div>
                     </div>
                     <div class="project-content">
@@ -2326,7 +2277,7 @@
                 <!-- Project 6: Multi-Modal Customer Service Assistant -->
                 <div class="project-card animate-on-scroll" role="listitem">
                     <div class="project-header">
-                        <div class="project-icon" aria-hidden="true">🗣️</div>
+                        <div class="project-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg></div>
                         <div class="project-status">Proof of Concept</div>
                     </div>
                     <div class="project-content">
@@ -2378,79 +2329,19 @@
                 </div>
                 <div class="skills-grid animate-on-scroll">
                     <div class="skill-card">
-                        <div class="skill-icon">🎯</div>
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
                         <h3 class="skill-title">Exceptional Accuracy</h3>
                         <p class="skill-description">Achieved an average error of just $46, proving the model's precision in a difficult prediction task.</p>
                     </div>
                     <div class="skill-card">
-                        <div class="skill-icon">🚀</div>
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.2 21.8a2.2 2.2 0 0 1-2.2-2.2c0-2.3 1.2-4.1 2.6-5.1.5-.4 1.1-.7 1.6-.9.4-.2.8-.3 1.2-.4.4-.1.9-.1 1.3 0 .5.1 1 .2 1.5.4.5.2 1 .5 1.5.8.6.3 1.1.7 1.6 1.1 1.4 1 2.6 2.8 2.6 5.1a2.2 2.2 0 0 1-2.2 2.2H6.2z"></path><path d="M12 2c0-1.1.9-2 2-2s2 .9 2 2v2h-4V2z"></path><path d="M12 11.1V6.2c0-1.8 1.4-3.2 3.2-3.2H17c.5 0 1 .2 1.4.6.4.4.6 1 .6 1.4v1.8c0 1.8-1.4 3.2-3.2 3.2h-1.8c-.5 0-1-.2-1.4-.6-.4-.4-.6-1-.6-1.4z"></path></svg></div>
                         <h3 class="skill-title">Outperformed Giants</h3>
                         <p class="skill-description">The fine-tuned model significantly outperformed the much larger and more expensive GPT-4o, showing the power of specialization.</p>
                     </div>
                     <div class="skill-card">
-                        <div class="skill-icon">💡</div>
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.73 18.23a1.43 1.43 0 0 1-1.21.77H3.48a1.42 1.42 0 0 1-1.22-.78 1.48 1.48 0 0 1 .22-1.46l5.1-6.14a1.42 1.42 0 0 1 1.22-.55h6.4a1.42 1.42 0 0 1 1.22.55l5.1 6.14a1.42 1.42 0 0 1 .21 1.47z"></path><path d="M12 21v-2"></path><path d="M12 3v2"></path><path d="M12 9a4 4 0 0 0-4 4"></path></svg></div>
                         <h3 class="skill-title">High Success Rate</h3>
                         <p class="skill-description">With a 70% success rate on predictions, the model demonstrated its reliability and business value for automated pricing tasks.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Preview Section -->
-    <section class="section blog" id="blog">
-        <div class="container">
-            <div class="section-header animate-on-scroll">
-                <div class="section-badge">Latest Insights</div>
-                <h2 class="section-title">AI Thoughts & Tutorials</h2>
-                <p class="section-subtitle">
-                    Stay updated with the latest AI trends, tutorials, and industry insights
-                </p>
-            </div>
-            <div class="blog-grid">
-                <div class="blog-card animate-on-scroll">
-                    <div class="blog-image">🤖</div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span>July 15, 2024</span>
-                            <span>AI Development</span>
-                        </div>
-                        <h3 class="blog-title">Building Your First CrewAI Multi-Agent System</h3>
-                        <p class="blog-excerpt">
-                            A comprehensive guide to creating intelligent agent crews that collaborate 
-                            to solve complex problems. Learn the fundamentals and best practices.
-                        </p>
-                        
-                    </div>
-                </div>
-                <div class="blog-card animate-on-scroll">
-                    <div class="blog-image">🧠</div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span>Jun 10, 2024</span>
-                            <span>Machine Learning</span>
-                        </div>
-                        <h3 class="blog-title">The Future of Autonomous AI Agents in Business</h3>
-                        <p class="blog-excerpt">
-                            Exploring how autonomous AI agents are transforming industries and 
-                            what businesses need to know to stay competitive.
-                        </p>
-                        
-                    </div>
-                </div>
-                <div class="blog-card animate-on-scroll">
-                    <div class="blog-image">⚡</div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span>Mar 5, 2024</span>
-                            <span>Tutorial</span>
-                        </div>
-                        <h3 class="blog-title">CrewAI vs LangGraph: Choosing the Right Framework</h3>
-                        <p class="blog-excerpt">
-                            A detailed comparison of popular AI frameworks to help you choose 
-                            the best tool for your specific use case and requirements.
-                        </p>
-                        
                     </div>
                 </div>
             </div>
@@ -2475,28 +2366,36 @@
                     </div>
                     <div class="contact-items-wrapper">
                         <a class="contact-item" href="mailto:ridvanyigit@gmx.net">
-                            <div class="contact-icon">📧</div>
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </div>
                             <div class="contact-text">
                                 <strong>Email</strong>
                                 <span>ridvanyigit@gmx.net</span>
                             </div>
                         </a>
                         <a class="contact-item" href="https://www.linkedin.com/in/ridvan-yigit-5494842b6/" target="_blank" rel="noopener noreferrer">
-                            <div class="contact-icon">💼</div>
+                            <div class="contact-icon">
+                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            </div>
                             <div class="contact-text">
                                 <strong>LinkedIn</strong>
                                 <span>Professional Network</span>
                             </div>
                         </a>
                         <a class="contact-item" href="https://github.com/ridvanyigit" target="_blank" rel="noopener noreferrer">
-                            <div class="contact-icon">🚀</div>
+                            <div class="contact-icon">
+                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </div>
                             <div class="contact-text">
                                 <strong>GitHub</strong>
                                 <span>Open Source Projects</span>
                             </div>
                         </a>
                         <a class="contact-item" href="https://huggingface.co/ridvanyigit" target="_blank" rel="noopener noreferrer">
-                            <div class="contact-icon">🤗</div>
+                            <div class="contact-icon">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20.25 0H3.75A3.75 3.75 0 0 0 0 3.75v16.5A3.75 3.75 0 0 0 3.75 24h16.5A3.75 3.75 0 0 0 24 20.25V3.75A3.75 3.75 0 0 0 20.25 0zM7.5 18a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm9 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM7.058 12c.23-.938.83-1.743 1.635-2.285a.75.75 0 0 1 .614 1.342 2.599 2.599 0 0 0-.825 1.435.75.75 0 0 1-1.424-.502v.01zm9.884 0v-.01a.75.75 0 0 1-1.424.502c-.23-.94-.83-1.743-1.635-2.285a.75.75 0 0 1 .614-1.342c.805.542 1.405 1.347 1.635 2.285a.75.75 0 0 1-.21.75.747.747 0 0 1-.53-.25z"></path></svg>
+                            </div>
                             <div class="contact-text">
                                 <strong>Hugging Face</strong>
                                 <span>AI Models & Demos</span>
@@ -2555,7 +2454,9 @@
     <!-- Floating Chatbot Wrapper -->
     <div id="floatingChatbotWrapper">
         <button id="chatbotToggleButton" aria-label="Toggle chatbot" aria-expanded="false">
-            <span class="chatbot-icon">🤖</span>
+            <span class="chatbot-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </span>
             <span class="chatbot-close-icon">✕</span>
         </button>
         
@@ -2596,10 +2497,18 @@
                     <h3>Rıdvan Yiğit</h3>
                     <p>AI Engineer & Autonomous Agent Developer based in Vienna. Transforming businesses with cutting-edge AI solutions.</p>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/ridvan-yigit-5494842b6/" class="social-link" target="_blank" aria-label="LinkedIn">💼</a>
-                        <a href="https://github.com/ridvanyigit" class="social-link" target="_blank" aria-label="GitHub">🚀</a>
-                        <a href="https://huggingface.co/ridvanyigit" class="social-link" target="_blank" aria-label="Hugging Face">🤗</a>
-                        <a href="mailto:ridvanyigit@gmx.net" class="social-link" aria-label="Email">📧</a>
+                        <a href="https://www.linkedin.com/in/ridvan-yigit-5494842b6/" class="social-link" target="_blank" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                        <a href="https://github.com/ridvanyigit" class="social-link" target="_blank" aria-label="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                        <a href="https://huggingface.co/ridvanyigit" class="social-link" target="_blank" aria-label="Hugging Face">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.25 0H3.75A3.75 3.75 0 0 0 0 3.75v16.5A3.75 3.75 0 0 0 3.75 24h16.5A3.75 3.75 0 0 0 24 20.25V3.75A3.75 3.75 0 0 0 20.25 0zM7.5 18a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm9 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM7.058 12c.23-.938.83-1.743 1.635-2.285a.75.75 0 0 1 .614 1.342 2.599 2.599 0 0 0-.825 1.435.75.75 0 0 1-1.424-.502v.01zm9.884 0v-.01a.75.75 0 0 1-1.424.502c-.23-.94-.83-1.743-1.635-2.285a.75.75 0 0 1 .614-1.342c.805.542 1.405 1.347 1.635 2.285a.75.75 0 0 1-.21.75.747.747 0 0 1-.53-.25z"></path></svg>
+                        </a>
+                        <a href="mailto:ridvanyigit@gmx.net" class="social-link" aria-label="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -2614,24 +2523,14 @@
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul class="footer-links">
-                        <li><a href="#blog">Blog</a></li>
                         <li><a href="#projects">Portfolio</a></li>
-                        <li><a href="#" class="legal-link">Case Studies</a></li>
-                        <li><a href="#" class="legal-link">AI Tools</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul class="footer-links">
-                        <li><a href="#" class="legal-link">Privacy Policy</a></li>
-                        <li><a href="#" class="legal-link">Terms of Service</a></li>
-                        <li><a href="#" class="legal-link">Cookie Policy</a></li>
-                        <li><a href="#" class="legal-link">Imprint</a></li>
+                        <li><a href="#case-study" class="legal-link">Case Studies</a></li>
+                        <li><a href="https://huggingface.co/ridvanyigit" class="legal-link" target="_blank" rel="noopener">AI Tools</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Rıdvan Yiğit. All rights reserved. | Built with passion in Vienna 🇦🇹 | Powered by AI</p>
+                <p>&copy; 2025 Rıdvan Yiğit. | Built with passion in Vienna 🇦🇹</p>
             </div>
         </div>
     </footer>
@@ -2698,10 +2597,13 @@
 
             legalLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const linkText = link.textContent;
-                    const comingSoonMessage = 'This page is currently under construction and will be available soon. For any questions, please feel free to reach out via the contact form.';
-                    openModal(linkText, comingSoonMessage);
+                    // prevent default only if it's not a real link
+                    if(link.getAttribute('href') === '#' || !link.hasAttribute('target')) {
+                       e.preventDefault();
+                       const linkText = link.textContent;
+                       const comingSoonMessage = 'This page is currently under construction and will be available soon. For any questions, please feel free to reach out via the contact form.';
+                       openModal(linkText, comingSoonMessage);
+                    }
                 });
             });
 
