@@ -28,7 +28,7 @@ A FastAPI-powered AI chatbot integrated into Rıdvan Yiğit's personal portfolio
 
 ```
 ridvan-chatbot-project/
-├── .env                     # Environment variables
+├── .env                    # Environment variables
 ├── .env.example            # Environment template
 ├── .gitignore              # Git ignore rules
 ├── README.md               # This file
